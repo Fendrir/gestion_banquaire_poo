@@ -8,5 +8,5 @@ class Conseiller extends Personne
     return parent::__toString().
             " Nb Client: ".$this->nbClient."<br>";
   }
-  
+
 }

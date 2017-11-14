@@ -22,7 +22,14 @@ class Personne
           " Prenom:".$this->prenom.
           " Nom: ".$this->nom;
   }
-  
+
+  public function __clone()
+  {
+    $this->id = self::$prochainId++;
+    $this->prenom = $prenom;
+    echo "j\'ai bien été cloné";
+  }
+
   public static function getProchainId()
   {
     return self::$prochainId;

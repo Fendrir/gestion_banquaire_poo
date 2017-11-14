@@ -16,7 +16,7 @@ class PersonneManager
   {
     if( !self::$instance )
     {
-      echo "Instanciation";
+      echo "Instanciation </br>";
       self::$instance = new PersonneManager();
     }
     return self::$instance;
