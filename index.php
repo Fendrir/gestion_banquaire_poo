@@ -15,25 +15,25 @@ ob_start();
 if($p === 'home'){
     include('pages/Home.php');
 }
-
+$content=ob_clean();
 
 include('assets/nav_bar/nav_bar.php');
 include('default/Default.php');
 
 
-require_once('class/Personne.php');
-require_once('class/Conseiller.php');
-require_once('class/Client.php');
-require_once('class/PersonneManager.php');
+// require_once('class/Personne.php');
+// require_once('class/Conseiller.php');
+// require_once('class/Client.php');
+// require_once('class/PersonneManager.php');
 
-$persManager = PersonneManager::getInstance();
-$persManager = PersonneManager::getInstance();
+// $persManager = PersonneManager::getInstance();
+// $persManager = PersonneManager::getInstance();
 
 // new PersonneManager(); // Génère une erreur
 
-$conseiller = $persManager->addConseiller("Pierre", "de Soos");
+// $conseiller = $persManager->addConseiller("Pierre", "de Soos");
 
-$persManager->addClient("Louis", "Fabre", $conseiller );
+// $persManager->addClient("Louis", "Fabre", $conseiller );
 
 // var_dump($persManager);
 
@@ -45,5 +45,14 @@ $persManager->addClient("Louis", "Fabre", $conseiller );
 
 require_once('class/Operation.php');
 
-$operationTest= new Operation(50);
-var_dump($operationTest);
+$operationTest= new Operation(-500);
+$operationTest;
+
+$myArray = [152,154,198,40,-212,-800,1250,0];
+
+for ($i=0; $i < count($myArray); $i++) { 
+    
+    $operationTest= new Operation($myArray[$i]);
+    $operationTest;
+
+}
